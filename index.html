@@ -53,11 +53,19 @@
 
 <body>
 
-    <div class="contrainer">
-        <center>  <div> <h1 style="color: green; font-size: 35px; padding-top: 20px;">รายงานสถานการณ์โควิด-19</h1> </center>
+    <div class="contrainer ">
+       <div style=" display: flex;">
+        <div class="col-2"></div>
+        <div class="col-8  ">      
+            <center> 
+                 <h1 style="color: green; font-size: 35px; ">รายงานสถานการณ์โควิด-19</h1> 
+        </center>
         </div>
-       <div style="margin-left: 140px;">
-        <div class="col-10" style="margin: 20px ;padding: 20px; background:rgb(93, 73, 182);border-radius: 10px; ">
+    </div>
+       <div style=" display: flex;">
+          
+           <div class="col-2"></div>
+           <div class="col-8" style=" background:rgb(93, 73, 182);border-radius: 10px; ">
             <center>
                 <h1>ยอดผู้ติดเชื้อสะสม</h1>
                 <h1 id="con"></h1>
@@ -65,57 +73,80 @@
             </center>
         </div>
     </div>
-        <div class="row" style=" margin-left: 220px;">
-            <div style="margin: 5px ;padding: 20px; background:green;border-radius: 10px; " class="col-3">
+        <div class="row" >
+            <div class="col-1"></div>
+            <div style="margin: 5px ;padding: 10px; background:green;border-radius: 10px; " class="col-3">
                 <center>
                     <h4>หายแล้ว</h4>
                     <h3 id="recover"></h3>
                     <h5 id="newrecover"></h5>
                 </center>
             </div>
-            <div style="margin: 5px ;padding: 20px; background:rgb(110, 161, 9);border-radius: 10px; " class="col-3">
+            <div style="margin: 5px ;padding: 10px; background:rgb(110, 161, 9);border-radius: 10px; " class="col-3">
                 <center>
                     <h4>รักษาอยู่ใน รพ.</h4>
                     <h3 id="hot"></h3>
                 </center>
             </div>
-            <div style="margin: 5px ;padding: 20px; background:gray;border-radius: 10px; " class="col-3">
+            <div style="margin: 5px ;padding: 10px; background:gray;border-radius: 10px; " class="col-3">
                 <center>
                     <h4>เสียชีวิต</h4>
                     <h3 id="de"></h3>
                     <h5 id="newde"></h5>
                 </center>
             </div>
-
         </div>
-        <div style="margin-top: 10px;margin-left: 220px;margin-bottom: 60px;">
+        <div style=" display: flex;">
+            <div class="col-1"></div>
+        <div class="col-6" style="margin-top: 10px;margin-bottom: 60px;">
             <p id="date" style=" margin-bottom: 0px;"></p>
             <p>Cradit :<a
                     href="https://covid19.th-stat.com/th/api?fbclid=IwAR1somu55K3iO-M4TkohNVn8zyuNpey2ulroyphOpV-ALZMO45864SNS784">กรมควบคุมโรค</a>
             </p>
         </div>
-
-        <div  style="margin: 10px ;  display: flex; margin-bottom: 50px; margin-left: 150px;">
-            <div class="col-5">
+    </div>
+        <div  style=" display: flex; margin-bottom: 100px; ">
+            <div class="col-1"></div>
+            <div class="col-4">
                 <!-- //กราฟ// -->
                <center><h2>เพศ</h2></center> 
-                <canvas id="myChart" height="150"></canvas>
+                <canvas id="myChart" ></canvas>
                
             </div>
             <div class="col-4">
-                <canvas id="MChart" width="250" height="180"></canvas>
+                <canvas id="MChart" ></canvas>
             </div>
         </div>
 
-        <div style="margin-top: 40px ;margin-left: 350px; margin-bottom: -40px;">
-            <button id="province" class="btn btn-info" style="padding: 20px; font-size: 15px;">Province</button>
-            <button id="nation" class="btn btn-info" style="padding: 20px; font-size: 15px;"" >Nation</button>
-</div>
-<div id="head">
-
-        </div>
+    <div style="display: flex;">
+            <div class="col-4" style="text-align: right;">
+                
+                 <button id="province" class="btn btn-info" style="padding: 10px; font-size: 15px;">Province</button>
+                <button id="nation" class="btn btn-info" style="padding: 10px; font-size: 15px;" >Nation</button></div>
+        
+        <div class="col-4" id="head"></div>
     </div>
+    <div style="display: flex;">
+        <div class="col-2"></div>
+        <div class="col-10">
+            <table >
+                <tbody>
+                <tr>
+                <th id="ch">
+                  
+                </th>
+                <th>
+                    ยอดผู้ติดเชื้อสะสม
+                </th>
+                </tr>
+             
+            </tbody>
+        <tbody id="table"></tbody>
+            </table>
+        </div>
 
+    </div>
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>

@@ -56,24 +56,18 @@ $("#MChart").append(MChart);
         var head =`<center>
         <h2>PROVINCE</h2>
         <p id="Update"> </p>
-        <table id="table">
-            <tr>
-                <th>จังหวะ</th>
-                <th>ติดเซื้อสะสม</th>             
-              </tr>
-        </table>
         </center>`
         $("#head").append(head)
         $("#Update").append("อัพเดทข้อมูลล่าสุด : "+date);
+        var nat = "จังหวัด";
+        $("#ch").append(nat);
   for (const key in data.Province) {
       var da = data.Province[key];
                   var row =  `
                   <tr>
-                   
                     <td>${key}</td>
                     <td>${da}</td>
-                  </tr>
-               
+                  </tr> 
                 `
                 $("#table").append(row);
                
@@ -81,15 +75,14 @@ $("#MChart").append(MChart);
         $("#province").click(function () {
             $("#table").empty();
             $("#head").empty();
-            var head =`<center>
+            $("#ch").empty();
+            var nat = "จังหวัด";
+            $("#ch").append(nat);
+            var head =`
+            <center>
             <h2>PROVINCE</h2>
             <p id="Update"> </p>
-            <table id="table">
-                <tr>
-                    <th>จังหวะ</th>
-                    <th>ติดเซื้อสะสม</th>             
-                  </tr>
-            </table>
+        
             </center>`
             $("#head").append(head)
             $("#Update").append("อัพเดทข้อมูลล่าสุด : "+date);
@@ -112,17 +105,13 @@ $("#MChart").append(MChart);
         
         $("#table").empty();
         $("#head").empty();
+        $("#ch").empty();
+        var nat = "ประเทศ";
+        $("#ch").append(nat);
         var head =`<center>
         <h2>NATION</h2>
             <p id="Update"> </p>
-        <table id="table">
-            <tr>
-                <th>ประเทศ</th>
-                <th>ติดเซื้อสะสม</th> 
-             
-              </tr>
-        
-        </table>
+       
         </center>`
         $("#head").append(head)
         $("#Update").append("อัพเดทข้อมูลล่าสุด : "+date);
