@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>รายงานสถานการณ์โควิด-19</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <style>
+        h1,
+        h3,
+        h5,
+        h4 {
+            color: white;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        table {
+            width: 60%;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid green;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: rgb(50, 126, 50);
+        }
+
+        th,
+        td {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contrainer">
+        <center>  <div> <h1 style="color: green; font-size: 35px; padding-top: 20px;">รายงานสถานการณ์โควิด-19</h1> </center>
+        </div>
+       <div style="margin-left: 140px;">
+        <div class="col-10" style="margin: 20px ;padding: 20px; background:rgb(93, 73, 182);border-radius: 10px; ">
+            <center>
+                <h1>ยอดผู้ติดเชื้อสะสม</h1>
+                <h1 id="con"></h1>
+                <h5 id="newcon"></h5>
+            </center>
+        </div>
+    </div>
+        <div class="row" style=" margin-left: 220px;">
+            <div style="margin: 5px ;padding: 20px; background:green;border-radius: 10px; " class="col-3">
+                <center>
+                    <h4>หายแล้ว</h4>
+                    <h3 id="recover"></h3>
+                    <h5 id="newrecover"></h5>
+                </center>
+            </div>
+            <div style="margin: 5px ;padding: 20px; background:rgb(110, 161, 9);border-radius: 10px; " class="col-3">
+                <center>
+                    <h4>รักษาอยู่ใน รพ.</h4>
+                    <h3 id="hot"></h3>
+                </center>
+            </div>
+            <div style="margin: 5px ;padding: 20px; background:gray;border-radius: 10px; " class="col-3">
+                <center>
+                    <h4>เสียชีวิต</h4>
+                    <h3 id="de"></h3>
+                    <h5 id="newde"></h5>
+                </center>
+            </div>
+
+        </div>
+        <div style="margin-top: 10px;margin-left: 220px;margin-bottom: 60px;">
+            <p id="date" style=" margin-bottom: 0px;"></p>
+            <p>Cradit :<a
+                    href="https://covid19.th-stat.com/th/api?fbclid=IwAR1somu55K3iO-M4TkohNVn8zyuNpey2ulroyphOpV-ALZMO45864SNS784">กรมควบคุมโรค</a>
+            </p>
+        </div>
+
+        <div  style="margin: 10px ;  display: flex; margin-bottom: 50px; margin-left: 150px;">
+            <div class="col-5">
+                <!-- //กราฟ// -->
+               <center><h2>เพศ</h2></center> 
+                <canvas id="myChart" height="150"></canvas>
+               
+            </div>
+            <div class="col-4">
+                <canvas id="MChart" width="250" height="180"></canvas>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px ;margin-left: 350px; margin-bottom: -40px;">
+            <button id="province" class="btn btn-info" style="padding: 20px; font-size: 15px;">Province</button>
+            <button id="nation" class="btn btn-info" style="padding: 20px; font-size: 15px;"" >Nation</button>
+</div>
+<div id="head">
+
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
